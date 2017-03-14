@@ -1,0 +1,54 @@
+// codeforces 393 problem No A
+
+#include<stdio.h>
+int main()
+{
+    int m,d;
+    while(scanf("%d%d",&m,&d) != EOF)
+    {
+        int column = 0;
+        if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)
+        {
+            for(int i = 1; i <= 31;)
+            {
+                for(int j = d; j <= 7; j++)
+                {
+                    i++;
+
+                }
+                column++;
+                d = 1;
+
+            }
+        }
+        else if(m == 2)
+        {
+            for(int i = 1; i <= 28;)
+            {
+                for(int j = d; j <= 7; j++)
+                {
+
+                    i++;
+                }
+                column++;
+                d = 1;
+            }
+        }
+        else
+        {
+            for(int i = 1; i <= 30;)
+            {
+                for(int j = d; j <= 7; j++)
+                {
+                    i++;
+
+                }
+                column++;
+                d = 1;
+
+            }
+        }
+        printf("%d\n",column);
+    }
+    return 0;
+}
